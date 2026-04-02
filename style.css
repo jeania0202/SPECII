@@ -1,7 +1,6 @@
 
 * {
     font-family: Arial, sans-serif;
-    background-color: rgb(149, 86, 168);
     margin: 0;
     padding: 0;
 }
@@ -16,11 +15,53 @@ body{
 h1{
     text-align: center;
     color: rgb(255, 255, 255);
+    font-size: 2.5em;
 }
 .game-container {
+    background-color: rgb(198, 167, 201);
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     gap: 20px;
+    border: 3px solid rgb(74, 20, 99);
+    border-radius: 40px;
+    padding: 20px;
 }
+p{
+    font-size: 1.5em;
+    color: rgb(255, 255, 255);
+    font-style: arial;
+
+}
+.choices {
+    display: flex;
+    gap: 1em;
+
+}
+.choices button{
+    padding: 0.5em 1em;
+    font-size: 3em;
+    cursor: pointer;
+    border: none;
+    border-radius: 0.5em;
+    background-color: rgb(236, 225, 235);
+    color: rgb(74, 20, 99);
+    transition: background-color 0.3s ease;
+}
+.choices button:hover {
+    background-color: rgb(255, 255, 255);
+    border: 3px solid rgb(74, 20, 99);
+}   
+#your-choice, #computer-choice {
+    font-size: 1.6em;
+    color: rgb(255, 255, 255);
+    font-weight: bold;
+}
+#score{
+    font-size: 1.5em;
+    border:3px solid rgb(67, 28, 85);
+    border-radius: 0.5em;
+    padding: 10px 50px;
+}
+
