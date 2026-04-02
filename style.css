@@ -1,3 +1,4 @@
+
 h1{
     background-color: rgb(99, 95, 95);
     color: white;
@@ -9,4 +10,16 @@ h1{
     height: 45px;
     margin-left: 25%;
     
+}
+.game-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: rgb(131, 127, 127);
+    width: 50%;
+    margin-left: 23%;
+    border-radius: 10px;
+    height: fit-content;
+    padding: 20px;
 }
