@@ -8,30 +8,18 @@
     <script src="script.js"></script>
 </head>
 <body>
-    <h1>ROCK PAPER SCISSORS</h1>
     <div class="game-container">
+    <h1>ROCK PAPER SCISSORS</h1>
+    <p id="result-text">Make your choice!</p>
         <div class="choices">
-            <button id="rock" class="choice-button">🪨Rock</button>
-            <button id="paper" class="choice-button">📄Paper</button>
-            <button id="scissors" class="choice-button">✂️Scissors</button>
+            <button id="rock" >🪨</button>
+            <button id="paper">📄</button>
+            <button id="scissors">✂️</button>
         </div>
-        <div class="result">
-              <div class="choice-display" id="playerChoice"></div>
-              <div class="choice-display" id="computerChoice"></div>
-            <p id="result-text">Make your choice!</p>
-        <div class="score-row">
-            <div>
-                <div class="score-item" id="playerscore">0</div>
-                <div class="score-label">Your Score</div>
-            </div>
-            <div>
-                <div class="score-item" id="computerscore">0</div>
-                <div class="score-label">Computer Score</div>
-            </div>
+                <div id="player-Choice">YOU:</div>
+                <div id="computer-Choice">COMPUTER:</div>
+                <div id="score">RESULT:</div>
         </div>             
-            <h2 id="gameResult"></h2>
-            <button class="btn" id="Play">Play Again</button>
-        </div>
-     </div>
+
 </body>
 </html>
