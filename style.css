@@ -16,6 +16,10 @@ h1{
     text-align: center;
     color: rgb(255, 255, 255);
     font-size: 2.5em;
+    padding: 10px;
+    border: solid 3px rgb(74, 20, 99);
+    border-radius: 20px;
+    margin-bottom: 30px;
 }
 .game-container {
     background-color: rgb(198, 167, 201);
@@ -58,7 +62,7 @@ p{
     color: rgb(255, 255, 255);
     font-weight: bold;
 }
-#score{
+#result-text {
     font-size: 1.5em;
     border:3px solid rgb(67, 28, 85);
     border-radius: 0.5em;
