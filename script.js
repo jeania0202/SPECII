@@ -6,7 +6,7 @@ const playerScoreText = document.getElementById("player-score");
 const computerScoreText = document.getElementById("computer-score");
 const finalResult = document.getElementById("final-result");
 
-const resetBtn = document.getElementById("reset-btn");
+const resetBtn = document.getElementById("reset");
 const gameBox = document.querySelector(".game-container");
 
 const choices = ["ROCK", "PAPER", "SCISSORS"];
@@ -20,7 +20,18 @@ let playerScore = 0;
 let computerScore = 0;
 let gameOver = false;
 
+function getComputerChoice() {
+    return choices[Math.floor(Math.random() * 3)];
+}
+
 function playgame(player){
+    if(gameOver) return;
+
+    const computerChoice = getComputerChoice();
+
+     playerChoiceDisplay.textContent = `YOU: ${player}`;
+    computerChoiceDisplay.textContent = `COMPUTER: ${computerChoice}`;
+    
     if(player === computerChoice){
         resultText.textContent = "It's a tie!";
         return;
@@ -42,8 +53,8 @@ function playgame(player){
 
         setTimeout(() => gameBox.classList.remove("shake"), 300);
 
-    playerChoiceDisplay.textContent = `YOU: ${player}`;
-    computerChoiceDisplay.textContent = `COMPUTER: ${computerChoice}`;
+    playerChoiceDisplay.textContent = `YOU: ${playerScore}`;
+    computerChoiceDisplay.textContent = `COMPUTER: ${computerScore}`;
 }
 
 function checkWinner() {
