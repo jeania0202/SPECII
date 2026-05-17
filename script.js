@@ -5,16 +5,12 @@ const resultText = document.getElementById("result-text");
 const playerScoreText = document.getElementById("player-score");
 const computerScoreText = document.getElementById("computer-score");
 const finalResult = document.getElementById("final-result");
-
-const resetBtn = document.getElementById("reset");
+const resetBtn = document.getElementById("reset-btn");
 const gameBox = document.querySelector(".game-container");
-
 const choices = ["ROCK", "PAPER", "SCISSORS"];
-
 const rock=document.getElementById("rock");
 const paper=document.getElementById("paper");
 const scissors=document.getElementById("scissor");
-const computerChoice = choices[Math.floor(Math.random() * 3)];
 
 let playerScore = 0;
 let computerScore = 0;
@@ -30,7 +26,7 @@ function playgame(player){
     const computerChoice = getComputerChoice();
 
      playerChoiceDisplay.textContent = `YOU: ${player}`;
-    computerChoiceDisplay.textContent = `COMPUTER: ${computerChoice}`;
+     computerChoiceDisplay.textContent = `COMPUTER: ${computerChoice}`;
     
     if(player === computerChoice){
         resultText.textContent = "It's a tie!";
@@ -53,8 +49,9 @@ function playgame(player){
 
         setTimeout(() => gameBox.classList.remove("shake"), 300);
 
-    playerChoiceDisplay.textContent = `YOU: ${playerScore}`;
-    computerChoiceDisplay.textContent = `COMPUTER: ${computerScore}`;
+    playerScoreText.textContent = `YOU: ${playerScore}`;
+    computerScoreText.textContent = `COMPUTER: ${computerScore}`;
+    checkWinner();
 }
 
 function checkWinner() {
