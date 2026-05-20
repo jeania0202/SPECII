@@ -15,7 +15,7 @@ body{
     align-items: center;
     justify-content: center;
     height: 100vh;
-    background-color:radial-gradient(circle, #2b0a3d, #120018);
+    background:radial-gradient(circle, #2b0a3d, #120018);
 }
 h1 {
     font-size: 2.7em;
@@ -26,48 +26,69 @@ h1 {
         0 0 20px #9900ff;
 }
 .game-container {
-    background-color: rgb(198, 167, 201);
+    background: rgba(255, 255, 255, 0.05);
+    border: 2px solid #ff00ff;
+    border-radius: 25px;
+
+    width: 480px;
+    min-height: 450px;
+    padding: 40px;
+
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     gap: 20px;
-    border: 3px solid rgb(74, 20, 99);
-    border-radius: 40px;
-    padding: 20px;
-}
-p{
-    font-size: 1.5em;
-    color: rgb(255, 255, 255);
-    font-style: arial;
 
+    box-shadow:
+        0 0 15px #ff00ff,
+        0 0 40px rgba(255, 0, 255, 0.4),
+        inset 0 0 20px rgba(0, 255, 255, 0.2);
+
+    backdrop-filter: blur(12px);
 }
+
+p {
+    font-size: 1.4em;
+}
+
 .choices {
     display: flex;
-    gap: 1em;
-
+    gap: 15px;
 }
-.choices button{
-    padding: 0.5em 1em;
+
+.choices button {
     font-size: 3em;
-    cursor: pointer;
+    padding: 15px 20px;
     border: none;
-    border-radius: 0.5em;
-    background-color: rgb(236, 225, 235);
-    color: rgb(74, 20, 99);
-    transition: background-color 0.3s ease;
+    border-radius: 12px;
+    background: #111;
+    cursor: pointer;
+    box-shadow: 0 0 10px #00ffff;
+    transition: transform 0.2s, box-shadow 0.2s;
 }
 .choices button:hover {
-    background-color: rgb(255, 255, 255);
-    border: 3px solid rgb(74, 20, 99);
-}   
-#your-choice, #computer-choice {
+    transform: scale(1.2);
+    box-shadow:
+        0 0 20px #00ffff,
+        0 0 40px #ff00ff;
+}
+
+#player-choice, #computer-choice {
     font-size: 1.6em;
-    color: rgb(255, 255, 255);
     font-weight: bold;
 }
+
+#score-board {
+    display: flex;
+    gap: 25px;
+
+    font-size: 1.4em;
+    font-weight: bold;
+}
+
 #result-text {
-   font-size: 1.5em;
+    font-size: 1.5em;
     padding: 10px 20px;
     border: 2px solid #ff00ff;
     border-radius: 10px;
@@ -77,22 +98,42 @@ p{
     font-size: 2em;
     font-weight: bold;
     text-align: center;
-
     animation: pulse 1s infinite;
 }
 
 #reset-btn {
     margin-top: 10px;
     padding: 10px 20px;
-
     font-size: 1em;
     border: none;
     border-radius: 10px;
-
     cursor: pointer;
-
     background: #ff00ff;
-    box-shadow: 0 0 15px #ff00ff;
-
+    box-shadow: 0 0 15px #7c367c;
     transition: 0.3s;
+}
+
+#reset-btn:hover {
+    transform: scale(1.1);
+    box-shadow:
+        0 0 25px #f15cf1,
+        0 0 20px #00ffff;
+}
+
+@keyframes pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.08); }
+    100% { transform: scale(1); }
+}
+
+.shake {
+    animation: shake 0.3s;
+}
+
+@keyframes shake {
+    0% { transform: translateX(0); }
+    25% { transform: translateX(-5px); }
+    50% { transform: translateX(5px); }
+    75% { transform: translateX(-5px); }
+    100% { transform: translateX(0); }
 }

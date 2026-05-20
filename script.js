@@ -1,7 +1,6 @@
 const playerChoiceDisplay = document.getElementById("player-Choice");
 const computerChoiceDisplay = document.getElementById("computer-Choice");
 const resultText = document.getElementById("result-text");
-
 const playerScoreText = document.getElementById("player-score");
 const computerScoreText = document.getElementById("computer-score");
 const finalResult = document.getElementById("final-result");
@@ -65,7 +64,6 @@ function checkWinner() {
         }
     }
 }
-
 
 function resetGame() {
     playerScore = 0;
